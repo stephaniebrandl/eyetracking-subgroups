@@ -33,9 +33,8 @@ similar to `data_extractor_meco.py` or `data_extractor_geco.py` or adapt the cur
 - **results**: contains intermediate results. 
 
 ### 4 Requirements
-Before you start, make sure all the paths in `config.yaml` are set. If you just want to reproduce the plots or use the 
-fixations we have already preprocessed it should be fine. Otherwise you need to set `et_orig` where the raw
-eye-tracking data is stored. Also make sure you have installed all required Python packages as listed in 
+Before you start, make sure all the paths in `config.yaml` are set. You need to set `et_orig` where the raw
+eye-tracking data is stored (see `extract_human_importance/README.md` for further details). Also make sure you have installed all required Python packages as listed in 
 `requirements.txt`.  To run the POS-tagging, you would need to download respective models on spacy. 
 We used Python 3.9.10.
 

@@ -25,6 +25,11 @@ def read_meco_file(filename, language, data_path, out_dir):
     #reads meco files and stores relative fixation files
     print("Reading file for MECO: ", filename)
 
+    # Make sure that this is available
+    if not isfile(filename):
+        raise FileNotFoundError(
+            f"you need to store joint_data_trimmed.rda as joint_data_trimmed.csv and store it in {data_path}")
+
     data = pd.read_csv(filename, na_filter=False, encoding='utf-8')
     data["trialid"] = data["trialid"].apply(lambda x: int(x) if x!='NA' else x)
     data["ianum"] = data["ianum"].apply(lambda x: int(x) if x != 'NA' else x)
@@ -216,7 +221,6 @@ def main(data):
     if not isdir(et_dir):
         makedirs(et_dir)
 
-    # Make sure that this is available
     filename = join(et_dir, "joint_data_trimmed.csv")
 
     #print(subj_info_all)
