@@ -1,0 +1,46 @@
+geco:
+  et_dir: "./extract_human_importance/data/geco/enL1/"
+  att_dir: "./extract_model_importance/data/geco/enL1/"
+  results_dir: "./results/"
+  languages: ['pp']
+  filename: ".../MonolingualReadingData.xlsx"
+  material: "./extract_human_importance/data/geco/enL1/EnglishMaterial_corrected.csv"
+
+geco_nl:
+  et_dir: "./extract_human_importance/data/geco/nl/"
+  att_dir: "./extract_model_importance/data/geco/nl/"
+  results_dir: "./results/"
+  languages: [ 'pp' ]
+  filename: ".../L1ReadingData.xlsx"
+  material: ".../DutchMaterials.xlsx"
+
+gecoL2:
+  et_dir: "./extract_human_importance/data/geco/enL2/"
+  att_dir: "./extract_model_importance/data/geco/enL2/"
+  results_dir: "./results/"
+  languages: [ 'pp' ]
+  filename: ".../L2ReadingData.xlsx"
+  material: "./extract_human_importance/data/geco/enL1/EnglishMaterial_corrected.csv"
+
+mecoL1:
+  et_dir: "./extract_human_importance/data/meco/L1/"
+  et_orig: ""
+  att_dir: "./extract_model_importance/data/meco/L1/"
+  results_dir: "./results/"
+  languages: ["ee", "fi", "ge", "en", "du", "it", "gr", "he", "tr", "ru", "sp", "ko", "no"]
+
+mecoL2:
+  et_dir: "./extract_human_importance/data/meco/L2/"
+  et_orig: ""
+  att_dir: "./extract_model_importance/data/meco/L2/"
+  results_dir: "./results/"
+  languages: [ "ee", "fi", "ge", "en", "du", "it", "gr", "he", "tr", "ru", "sp", "ko", "no" ]
+
+mbert:
+    MODEL_NAME: 'bert-base-multilingual-cased'
+mt5:
+    MODEL_NAME: 'google/mt5-base'
+xlmr:
+    MODEL_NAME: "roberta-base"
+
+importance_type: "attention-first"
